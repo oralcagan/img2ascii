@@ -3,7 +3,7 @@ use std::{fs::OpenOptions, io::Write, path::Path};
 use crate::error::ConverterResult;
 use image::{imageops::FilterType, io::Reader as ImageReader, ImageBuffer, Luma};
 
-pub fn covert(args: crate::ProcessedArgs) -> ConverterResult<()> {
+pub fn convert(args: crate::ProcessedArgs) -> ConverterResult<()> {
     let reader = ImageReader::open(&args.file)?;
     let mut img = reader.decode()?;
     if args.ratio {

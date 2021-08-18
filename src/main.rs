@@ -75,5 +75,5 @@ fn image_dimensions(path: &str) -> ConverterResult<(u32, u32)> {
 
 fn main() {
     let args = ProcessedArgs::try_from(argh::from_env::<Args>()).unwrap();
-    crate::converter::covert(args).unwrap();
+    crate::converter::convert(args).unwrap();
 }
